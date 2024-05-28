@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: x5eb2sfi2-dotnet-basic-gitops
+  description: This is GitOps manifest for x5eb2sfi2-dotnet-basic   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: x5eb2sfi2-dotnet-basic
+    janus-idp.io/tekton: x5eb2sfi2-dotnet-basic 
+    backstage.io/kubernetes-id: x5eb2sfi2-dotnet-basic 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:x5eb2sfi2-dotnet-basic
